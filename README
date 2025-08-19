@@ -1,0 +1,10 @@
+# SteamLibraryAPI – Political Lean (Two-Party) Estimator
+
+Estimate per-game Democratic/Republican two-party shares from your Steam library using light priors + a calibrated logistic model. **Exploratory only** — not ground truth.
+
+## TL;DR
+```powershell
+pip install pandas scikit-learn requests python-dateutil python-dotenv rapidfuzz
+py -3 .\steam_export_and_enrich.py --hltb ".\hltb_placeholder.csv" --cutoff 80
+py -3 .\refined_political_model.py --csv ".\steam_library_with_hltb.csv" `
+  --anchor-prior --two-party-prior 0.50 --prior-scale 0.5 --C 0.4 --temp 0.9
