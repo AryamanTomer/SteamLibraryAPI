@@ -1,3 +1,7 @@
+
+This project exports your Steam library, enriches it with main-story playtime (HLTB), and runs a small calibrated model to estimate each game’s two-party audience share (Dem vs. Rep). 
+It avoids franchise shortcuts, uses per-title features (genres, name tokens, year, hours), and supports anchoring the library average to a target (e.g., 50/50) for stability. 
+Outputs are CSVs designed for quick analysis—exploratory only, not ground truth.
 # SteamLibraryAPI – Political Lean (Two-Party) Estimator
 
 Estimate per-game Democratic/Republican two-party shares from your Steam library using light priors + a calibrated logistic model. **Exploratory only** — not ground truth.
